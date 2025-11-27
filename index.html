@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализатор даты рождения</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">
+                <span class="neon">Анализатор</span>
+                <span class="sub">даты рождения</span>
+            </h1>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="day">День</label>
+                <input type="number" id="day" min="1" max="31" placeholder="01">
+            </div>
+            <div class="input-group">
+                <label for="month">Месяц</label>
+                <input type="number" id="month" min="1" max="12" placeholder="01">
+            </div>
+            <div class="input-group">
+                <label for="year">Год</label>
+                <input type="number" id="year" min="1900" max="2024" placeholder="1990">
+            </div>
+        </div>
+
+        <button class="analyze-btn" onclick="analyzeBirthday()">
+            <span>Анализировать</span>
+            <div class="btn-glow"></div>
+        </button>
+
+        <div class="results" id="results">
+            <div class="result-card day-of-week">
+                <h3>День недели</h3>
+                <div class="result-value" id="dayOfWeek"></div>
+            </div>
+
+            <div class="result-card leap-year">
+                <h3>Високосный год</h3>
+                <div class="result-value" id="leapYear"></div>
+            </div>
+
+            <div class="result-card age">
+                <h3>Ваш возраст</h3>
+                <div class="result-value" id="age"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-effects">
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+        <div class="floating-particle"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
